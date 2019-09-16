@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: white;
+}
+
+.navHero{
+    background-color: black;
+    
+}
+
+#particles-js{
+    height: 100%;
+    background: url(/images/nurse.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.navbar-nav li a{
+    color: white;
+}
+
+.navbar-toggle .icon-bar{
+    color: black;
+}
+
+.about-us{
+    margin-top: 30px;
+}
+hr{
+    width: 70px;
+    border-width: 2.5px; 
+    border-color: black;
+    margin-top: 3px;
+}
+
+.about-us p{
+    width: 100%;
+    
+    
+}
