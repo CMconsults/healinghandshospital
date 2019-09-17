@@ -19,6 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="css/admin.css" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/css/findPatient.css"> -->
 
 </head>
 
@@ -73,8 +74,15 @@
 <!-- This is where the main features are inserted -->
     <div id="content-wrapper">
       <div class="container-fluid">
-        <h1 class="text-center">Welcome</h1>
-        <p class="text-center">This is the administrative management page of Healing Hands Hospital. <br> Please ensure that you save any changes you are making appropriately. <br>Thank you.</p>
+          <form>
+              <div class="form-group">
+                <label ><h2>Enter Patient Information</h2></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Card Number or Surname">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+            
+              <button type="submit" class="btn btn-primary text-center">Search Patient</button>
+            </form>
       </div>
     </div>
      
