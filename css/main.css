@@ -22,12 +22,13 @@ body{
     color: white;
 }
 
-.navbar-toggle .icon-bar{
-    color: black;
+.navbar-toggler-icon{
+    color: red;
 }
 
 .about-us{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 hr{
     width: 70px;
@@ -40,4 +41,30 @@ hr{
     width: 100%;
     
     
+}
+
+.contact-us{
+    margin-top: 80px;
+    background-color: #019BC1;
+    padding: 30px 0 70px 0;
+    /* transform: skewY(5deg); */
+    color: white;
+    
+    left: 0;
+    right: 0;
+}
+
+.btnContact{
+    display: inline;
+    
+    
+}
+
+.contact-divider{
+    border-color: white;
+}
+
+footer{
+    /* background-color: #F7F7F7; */
+    margin: 30px 0 0 0;
 }
