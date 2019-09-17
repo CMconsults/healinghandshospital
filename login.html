@@ -7,6 +7,7 @@
     <title>Healing Hands Hospital</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
 
 </head>
 <body>
@@ -14,7 +15,7 @@
     
 <main>
 <!-- Hero Image or ParticleJS -->
-<div id="particles-js">
+<div id="particles-js" class="div-contain">
     <!-- <h1 class="big-text">Welcome To<br>Healing Hands Hospital</h1> -->
     <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="" width="150px" height="60px"></a>
@@ -24,13 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutUs">About Us</a>
+              <a class="nav-link" href="./#aboutUs">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contactUs">Contact Us</a>
+              <a class="nav-link" href="./#contactUs">Contact Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./login.html">Login</a>
@@ -38,31 +39,36 @@
           </ul>
         </div>
       </nav>
+
+      <!--Admin Login Form -->
+      <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+          
+              <!-- Icon -->
+              <div class="fadeIn first">
+                <img src="/images/logoblue.png" id="logoblue" alt="logo Icon" />
+              </div>
+          
+              <!-- Login Form -->
+              <form>
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+              </form>
+          
+              <!-- Remind Passowrd
+              <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+              </div> -->
+          
+            </div>
+          </div>
 </div>
 
-<!-- About Us -->
-<div class="container text-center about-us" id="aboutUs">
-    <h1>About Us</h1>
-    <hr>
-    <p class="about-wide text-center">Healing Hands Hospital was establshed on the 16th of September 2019. <br> This hospital is established on the ground that sick people can get healing at an affordable rate. <br> We are ruling out the common standard which says good health care is for the rich and not for the poor. <br>We have put in all that is in our control and beyond to provide standard health care <br> for young and old with honourable disregard for their income levels. <br> We take pride in seeing people live a healthy life.</p>
-</div>
+</main>
 
-<!-- Contact Us -->
-<div class="container-fluid text-center contact-us" id="contactUs">
-      <h1>Contact Us</h1>
-      <hr class="contact-divider">
-    <p>You can reach us through either of the means below</p>
-   
-
-<div class="btnContact text-center" ><a href="tel:+2348134326740"><button type="button" class="btn btn-outline-light btn-lg">Call Us</button></a></div>
-
-<div class="btnContact text-center"><a href="mailto:decagonhq@gmail.com"><button type="button" class="btn btn-outline-light btn-lg">Send Email</button></a><div>
-
-
-
-</main>  
-
-<footer class="text-center"><P>&copy; Copyright Decagon Bootcamp Project by Meshach ADERELE</P></footer>
+<footer class="text-center foot-div"><P>&copy; Copyright Decagon Bootcamp Project by Meshach ADERELE</P></footer>
 
 
 
