@@ -1,9 +1,12 @@
 {
-    "admin": [
-      { "id": 1,
-        "username": "admin",
-        "password": "decagonhq"
+  "users": [
+    {
+      
+      "email": "admin@healinghandshospital.com",
+      "password": "decagonhq",
+      "id": 1
     }
-    ]
+  ],
+  "post": [],
+  "comment": []
 }
-    
