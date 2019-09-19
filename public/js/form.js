@@ -11,6 +11,8 @@ $(document).ready(function () {
     const presentaddress = $('#presentaddress').val().trim();
     const permanentaddress = $('#permanentaddress').val().trim();
     const cardnumber = $('#cardnumber').val().trim();        //Trim is added to ensure that empty space cannot be submitted
+
+
     //Check if user input is empty
 
     if (!surname || !othername || !emailaddress || !dob || !phonenumber || !presentaddress || !permanentaddress || !cardnumber) {
@@ -19,7 +21,6 @@ $(document).ready(function () {
     }
 
     //Make get request to check if the user already exist
-
 
     $.ajax({
       method: 'GET',
@@ -53,6 +54,14 @@ $(document).ready(function () {
             },
             success: function () {
               $('.addMessage').html('Patient Added Successfully');
+               $('#surname').val("");
+             $('#othername').val("");
+              $('#emailaddress').val("");
+               $('#dob').val("");
+              $('#phonenumber').val("");
+              $('#presentaddress').val("");
+              $('#permanentaddress').val("");
+              $('#cardnumber').val(""); 
             },
           });
         }
@@ -93,21 +102,16 @@ $(document).ready(function () {
       },
     });
   });
-  //Logout Function
-  $('.logoutBtn').click(function () {
-    //clear the localstorage and redirect to signup page
-    // localStorage.clear();
-    // $('.checkLogin').html('Kindly login');
-    window.location.assign('login.html');
-  });
+  
+
+
 
   // Search Function
 
-
-
   $('.searchForm').submit(function () {
     event.preventDefault();
-    const searchInput = $('#searchInput').val();
+    const searchInput = $('#searchInput').val().trim();
+    $('.searchMessage').html('');
 
 
     if (!searchInput) {
@@ -130,7 +134,7 @@ $(document).ready(function () {
             return $('.searchMessage').html('patient not found');
           }
           userList.forEach(element => {
-            $(".outputTable").prepend(`<tr>        
+            const searchHtml = `<tr>        
            <td>${element.surname}</td>
            <td>${element.othername}</td>
            <td>${element.emailaddress}</td>
@@ -142,7 +146,10 @@ $(document).ready(function () {
   
            <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-cardNumber=${element.cardnumber} id=${element.id}><span class="glyphicon glyphicon-trash">Delete</span></button></p></td>
            </tr>
-           `);
+           `;
+
+
+           $(".outputTable").html(searchHtml)
           });
 
 
@@ -162,9 +169,9 @@ $(document).ready(function () {
         method: 'GET',
         url: `http://localhost:3000/patients?cardnumber=${$(this).data('cardnumber')}`,
         success: function (res) {
-          console.log(res);
+          
           updateForm(res[0]);
-          // res[0]
+          
         }
       });
 
@@ -174,7 +181,7 @@ $(document).ready(function () {
         method: 'GET',
         url: `http://localhost:3000/patients?cardnumber=${$(this).data('cardnumber')}`,
         success: function (res) {
-          console.log(res, 'view');
+          
           updateView(res[0]);
         }
       });
@@ -184,6 +191,34 @@ $(document).ready(function () {
     }
 
   });
+
+  // Function to update for details
+  function updateForm(data) {
+    $("#edit").find('input[name="surname"]').val(data.surname);
+    $("#edit").find('input[name="othername"]').val(data.othername);
+    $("#edit").find('input[name="email"]').val(data.emailaddress);
+    $("#edit").find('input[name="dob"]').val(data.dob);
+    $("#edit").find('input[name="phonenumber"]').val(data.phonenumber);
+    $("#edit").find('input[name="presentaddress"]').val(data.presentaddress);
+    $("#edit").find('input[name="permanentaddress"]').val(data.permanentaddress);
+    $("#edit").find('button[name="update"]').attr('data-id', data.id);
+  }
+
+  $("#edit").find('button[name="update"]').click(function (e) {
+    e.preventDefault();
+    
+    $.ajax({
+      url: `http://localhost:3000/patients/${$(this).data('id')}`,
+      method: 'PATCH',
+      data: $('form[name="update"]').serialize(), // It is used in form controls like <input>, <textarea>, <select> etc. It serializes the form values so that its serialized values can be used in the URL query string while making an AJAX request.
+      success: function (params) {
+        alert("Patient's information is successfully updated")
+      }
+    })
+  })
+
+
+  
   function updateView(data) {
     $('#view div[name="cardnumber"]').text(data.cardnumber)
     $('#view div[name="surname"]').text(data.surname)
@@ -229,31 +264,7 @@ $(document).ready(function () {
 
 
   });
-  // Function to update for details
-  function updateForm(data) {
-    $("#edit").find('input[name="surname"]').val(data.surname);
-    $("#edit").find('input[name="othername"]').val(data.othername);
-    $("#edit").find('input[name="email"]').val(data.emailaddress);
-    $("#edit").find('input[name="dob"]').val(data.dob);
-    $("#edit").find('input[name="phonenumber"]').val(data.phonenumber);
-    $("#edit").find('input[name="presentaddress"]').val(data.presentaddress);
-    $("#edit").find('input[name="permanentaddress"]').val(data.permanentaddress);
-    $("#edit").find('button[name="update"]').attr('data-id', data.id);
-  }
-
-  $("#edit").find('button[name="update"]').click(function (e) {
-    e.preventDefault();
-    //   console.log('open')
-    //  console.log($('form[name="update"]'));
-    $.ajax({
-      url: `http://localhost:3000/patients/${$(this).data('id')}`,
-      method: 'PATCH',
-      data: $('form[name="update"]').serialize(), // It is used in form controls like <input>, <textarea>, <select> etc. It serializes the form values so that its serialized values can be used in the URL query string while making an AJAX request.
-      success: function (params) {
-        alert("Patient's information is successfully updated")
-      }
-    })
-  })
+  
 
   // Function for delete button
   $(".delete-info").click(function (e) {
@@ -263,19 +274,10 @@ $(document).ready(function () {
       method: 'DELETE',
       success: function () {
         alert("Patient's record has been deleted");
+        window.location.reload();
       }
     });
   });
-
-
-
-
-  // //Function for close button
-  // $("#exit").click(function (e) {
-  //   e.preventDefault();
-  //   $(".modal-dialog").hide();
-  //   //   console.log('open')
-  //   //  console.log($('form[name="update"]'));
 
   });
 

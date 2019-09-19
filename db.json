@@ -28,6 +28,17 @@
       "permanentaddress": "Lagos, Maryland",
       "cardnumber": "2023",
       "id": 4
+    },
+    {
+      "surname": "John",
+      "othername": "Michael",
+      "emailaddress": "johnmike@gmail.com",
+      "dob": "1994-03-12",
+      "phonenumber": "0812222444",
+      "presentaddress": "lagos",
+      "permanentaddress": "Lekki",
+      "cardnumber": "1",
+      "id": 5
     }
   ]
 }
