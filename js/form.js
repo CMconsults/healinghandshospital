@@ -178,6 +178,9 @@ $(document).ready(function () {
           updateView(res[0]);
         }
       });
+    } else if($(this).data('target') == '#delete') {
+      $("button.delete-info").attr("data-id", $(this).attr('id'))
+      
     }
 
   });
@@ -256,7 +259,7 @@ $(document).ready(function () {
   $(".delete-info").click(function (e) {
     e.preventDefault();
     $.ajax({
-      url: `http://localhost:3000/patients/${$(this).attr('id')}`,
+      url: `http://localhost:3000/patients/${$(this).data("id")}`,
       method: 'DELETE',
       success: function () {
         alert("Patient's record has been deleted");
@@ -265,13 +268,15 @@ $(document).ready(function () {
   });
 
 
-  //Function for close button
-  $("#exit").click(function (e) {
-    e.preventDefault();
-    $(".modal-dialog").hide();
-    //   console.log('open')
-    //  console.log($('form[name="update"]'));
 
-  })
 
-});
+  // //Function for close button
+  // $("#exit").click(function (e) {
+  //   e.preventDefault();
+  //   $(".modal-dialog").hide();
+  //   //   console.log('open')
+  //   //  console.log($('form[name="update"]'));
+
+  });
+
+
