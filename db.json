@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "email": "admin@healinghandshospital.com",
+      "password": "decagonhq",
+      "id": 1
+    }
+  ],
+  "patients": [
+    {
+      "surname": "aderele",
+      "othername": "meshach",
+      "emailaddress": "colonelmeshach@gmail.com",
+      "dob": "1990-02-03",
+      "phonenumber": "8134326740",
+      "presentaddress": "FUTA SOUTHGATE, AKURE",
+      "permanentaddress": "parkway",
+      "cardnumber": "2022",
+      "id": 3
+    },
+    {
+      "surname": "Ayotunde",
+      "othername": "Soyinka",
+      "emailaddress": "soyinka.ayo@gmail.com",
+      "dob": "1933-02-16",
+      "phonenumber": "08132567810",
+      "presentaddress": "tiamiyu street",
+      "permanentaddress": "Lagos, Maryland",
+      "cardnumber": "2023",
+      "id": 4
+    },
+    {
+      "surname": "John",
+      "othername": "Michael",
+      "emailaddress": "johnmike@gmail.com",
+      "dob": "1994-03-12",
+      "phonenumber": "0812222444",
+      "presentaddress": "lagos",
+      "permanentaddress": "Lekki",
+      "cardnumber": "1",
+      "id": 5
+    }
+  ]
+}
