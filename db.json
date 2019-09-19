@@ -8,16 +8,26 @@
   ],
   "patients": [
     {
-      "surname": "Koladesoldier",
-      "othername": "Adewale",
-      "emailaddress": "kola19@yahoo.com",
-      "dob": "1983-02-05",
+      "surname": "aderele",
+      "othername": "meshach",
+      "emailaddress": "colonelmeshach@gmail.com",
+      "dob": "1990-02-03",
       "phonenumber": "8134326740",
-      "presentaddress": "bendel way, Ibadan",
-      "permanentaddress": "Sapele, Abuja",
-      "cardnumber": "2020",
-      "id": 2,
-      "email": "kola19@yahoo.com"
+      "presentaddress": "FUTA SOUTHGATE, AKURE",
+      "permanentaddress": "parkway",
+      "cardnumber": "2022",
+      "id": 3
+    },
+    {
+      "surname": "Ayotunde",
+      "othername": "Soyinka",
+      "emailaddress": "soyinka.ayo@gmail.com",
+      "dob": "1933-02-16",
+      "phonenumber": "08132567810",
+      "presentaddress": "tiamiyu street",
+      "permanentaddress": "Lagos, Maryland",
+      "cardnumber": "2023",
+      "id": 4
     }
   ]
 }

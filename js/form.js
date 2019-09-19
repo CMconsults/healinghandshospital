@@ -3,14 +3,14 @@ $(document).ready(function () {
   //Add Patient Function
   $('.addSubmitBtn').click(function (event) {
     event.preventDefault();
-    const surname = $('#surname').val();
-    const othername = $('#othername').val();
-    const emailaddress = $('#emailaddress').val();
-    const dob = $('#dob').val();
-    const phonenumber = $('#phonenumber').val();
-    const presentaddress = $('#presentaddress').val();
-    const permanentaddress = $('#permanentaddress').val();
-    const cardnumber = $('#cardnumber').val();
+    const surname = $('#surname').val().trim();
+    const othername = $('#othername').val().trim();
+    const emailaddress = $('#emailaddress').val().trim();
+    const dob = $('#dob').val().trim();
+    const phonenumber = $('#phonenumber').val().trim();
+    const presentaddress = $('#presentaddress').val().trim();
+    const permanentaddress = $('#permanentaddress').val().trim();
+    const cardnumber = $('#cardnumber').val().trim();        //Trim is added to ensure that empty space cannot be submitted
     //Check if user input is empty
 
     if (!surname || !othername || !emailaddress || !dob || !phonenumber || !presentaddress || !permanentaddress || !cardnumber) {

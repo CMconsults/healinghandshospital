@@ -5,26 +5,52 @@ body{
     background-color: white;
 }
 
-.navHero{
+.navbar{
+    background-color:transparent;
+    color: white;
+}
+
+
+
+span.navbar-toggler-icon{
+    border-color: white; 
+    /* background-color: white; */
+}
+
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: white;
+}
+
+
+.navbar-light .navbar-toggler{
+    color: white;
+}
+/* .navHero{
     background-color: black;
     
-}
+} */
 
 #particles-js{
     height: 100%;
-    background: url(/images/nurse.jpg);
+    background: url(/images/nurse2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-
-.navbar-nav li a{
+h1.big-text{
     color: white;
+    margin: 100px 0 50px 0;
 }
 
-.navbar-toggler-icon{
+
+/* .navbar-nav li a{
+    color: white;
+} */
+
+/* .navbar-toggler-icon{
     color: red;
-}
+} */
 
 .about-us{
     margin-top: 30px;
