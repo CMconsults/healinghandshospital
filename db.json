@@ -1,12 +1,47 @@
 {
   "users": [
     {
-      
       "email": "admin@healinghandshospital.com",
       "password": "decagonhq",
       "id": 1
     }
   ],
-  "post": [],
-  "comment": []
+  "patients": [
+    {
+      "surname": "Taye .O",
+      "othername": "Moses",
+      "emailaddress": "tundeednut@yahoo.com",
+      "dob": "1993-02-08",
+      "phonenumber": "08133322256",
+      "presentaddress": "4605 iseyin Street",
+      "permanentaddress": "Lagos, Ikeja",
+      "cardnumber": "2019",
+      "id": 1,
+      "email": "tundeednut@yahoo.com"
+    },
+    {
+      "surname": "Koladesoldier",
+      "othername": "Adewale",
+      "emailaddress": "kola19@yahoo.com",
+      "dob": "1983-02-05",
+      "phonenumber": "8134326740",
+      "presentaddress": "bendel way, Ibadan",
+      "permanentaddress": "Sapele, Abuja",
+      "cardnumber": "2020",
+      "id": 2,
+      "email": "kola19@yahoo.com"
+    },
+    {
+      "surname": "IfeTunde",
+      "othername": "Chibike",
+      "emailaddress": "tundeednut@yahoo.com",
+      "dob": "1983-09-10",
+      "phonenumber": "08144332255",
+      "presentaddress": "Lagos, Mainland",
+      "permanentaddress": "Cele Bus Stop, Lagos",
+      "cardnumber": "2021",
+      "id": 3,
+      "email": "tundeednut@yahoo.com"
+    }
+  ]
 }
